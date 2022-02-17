@@ -5,4 +5,9 @@
   "theme_version": "0.1",
   "about_url": null,
   "license_url": null,
+  "modifiers": {
+    "svg_icons": [
+      "copy"
+    ]
+  }
 }
