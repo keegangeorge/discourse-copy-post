@@ -30,6 +30,11 @@ createWidget('copy-widget', {
           copyButton.innerHTML = state;
         }, 3000);
       });
+    } else {
+      copyButton.innerHTML = 'No text to copy';
+      later(() => {
+        copyButton.innerHTML = state;
+      }, 3000);
     }
   },
 });
