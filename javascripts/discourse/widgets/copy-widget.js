@@ -18,7 +18,9 @@ createWidget('copy-widget', {
 
   click(attrs) {
     const copyButton = attrs.currentTarget.activeElement;
-    const postContents = this.attrs.attrs.cooked.replace(/(<([^>]+)>)/gi, '');
+    const cookedText = this.attrs.attrs.cooked.replace(/<p>(.*)<\/p>/g, '$1\n');
+    const postContents = cookedText.replace(/(<([^>]+)>)/gi, '');
+
     const state = copyButton.innerHTML;
 
     if (postContents) {
