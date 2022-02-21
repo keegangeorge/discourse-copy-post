@@ -1,0 +1,5 @@
+copy_raw_html:
+  type: bool
+  default: false
+  description:
+    "If selected the copied contents will be raw HTML instead of the stripped down plain text"
