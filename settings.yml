@@ -3,13 +3,7 @@ copy_raw_html:
   default: false
   description: 'If selected the copied contents will be raw HTML instead of the stripped down plain text'
 min_trust_level:
-  type: enum
-  default: disabled
-  choices:
-    - 'disabled'
-    - '0'
-    - '1'
-    - '2'
-    - '3'
-    - '4'
-  description: 'Select the minimum trust level required to see the widget.'
+  type: integer
+  default: 5
+  max: 5
+  description: 'Select the minimum trust level required to see the widget. (Select 5 to show to all users)'
