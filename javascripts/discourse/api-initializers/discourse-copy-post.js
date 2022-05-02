@@ -8,7 +8,7 @@ export default apiInitializer('0.11.1', (api) => {
       return;
     }
 
-    const minTrustLevel = parseInt(settings.min_trust_level, 10);
+    const minTrustLevel = +settings.min_trust_level;
     if (user.trust_level < minTrustLevel) {
       return;
     }
