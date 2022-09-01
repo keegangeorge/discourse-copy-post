@@ -2,7 +2,7 @@ import { later } from '@ember/runloop';
 import { iconNode } from 'discourse-common/lib/icon-library';
 import { createWidget } from 'discourse/widgets/widget';
 import I18n from 'I18n';
-import clipboardCopy from '../lib/clipboard-copy';
+import { clipboardCopy } from "discourse/lib/utilities";
 
 createWidget('copy-widget', {
   tagName: 'button',
