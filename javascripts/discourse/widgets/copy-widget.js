@@ -1,8 +1,8 @@
-import { later } from "@ember/runloop";
 import { iconNode } from "discourse-common/lib/icon-library";
 import { createWidget } from "discourse/widgets/widget";
 import I18n from "I18n";
 import { clipboardCopy } from "discourse/lib/utilities";
+import discourseLater from "discourse-common/lib/later";
 
 createWidget("copy-widget", {
   tagName: "button",
@@ -38,14 +38,14 @@ createWidget("copy-widget", {
       return clipboardCopy(postContents).then(() => {
         copyButton.classList.add("copied");
         copyButton.innerHTML = I18n.t(themePrefix("copied"));
-        later(() => {
+        discourseLater(() => {
           copyButton.classList.remove("copied");
           copyButton.innerHTML = state;
         }, 3000);
       });
     } else {
       copyButton.innerHTML = "No text to copy";
-      later(() => {
+      discourseLater(() => {
         copyButton.innerHTML = state;
       }, 3000);
     }
