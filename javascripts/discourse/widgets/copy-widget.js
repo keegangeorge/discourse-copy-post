@@ -8,7 +8,13 @@ createWidget("copy-widget", {
   tagName: "button",
 
   buildClasses() {
-    const classes = ["widget-button", "btn-flat", "no-text", "btn-icon"];
+    const classes = [
+      "widget-button",
+      "btn-flat",
+      "copy-post",
+      "no-text",
+      "btn-icon",
+    ];
     return classes;
   },
 
