@@ -1,6 +1,6 @@
-import { apiInitializer } from 'discourse/lib/api';
+import { apiInitializer } from "discourse/lib/api";
 
-export default apiInitializer('0.11.1', (api) => {
+export default apiInitializer("0.11.1", (api) => {
   const user = api.getCurrentUser();
   const trustLevelAllUsers = 5;
   const minTrustLevel = settings.min_trust_level;
@@ -15,9 +15,9 @@ export default apiInitializer('0.11.1', (api) => {
     }
   }
 
-  api.decorateWidget('post-menu:before-extra-controls', (helper) => {
+  api.decorateWidget("post-menu:before-extra-controls", (helper) => {
     const results = [];
-    results.push(helper.widget.attach('copy-widget', helper));
+    results.push(helper.widget.attach("copy-widget", helper));
     return results;
   });
 });
