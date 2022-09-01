@@ -18,6 +18,12 @@ createWidget("copy-widget", {
     return classes;
   },
 
+  buildAttributes() {
+    return {
+      title: I18n.t(themePrefix("title")),
+    };
+  },
+
   html() {
     return iconNode("copy");
   },
